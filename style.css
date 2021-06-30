@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Custom Properties */
+:root {
+    /* Colors */
+    --clr-light: rgba(255, 255, 255);
+    --clr-dark: rgba(0, 0, 0);
+    --clr-one: #34016A;
+    --clr-two: #ED6051;
+
+    /* Fonts/Texts */
+    --ff-primary: 'Ubuntu', sans-serif;;
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+}
+
+/* General Styles */
+body {
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    font-family: var(--ff-primary);
+}
+
+/* Class Styles */
+
+/* Mobile Settings */
