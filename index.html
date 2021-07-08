@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
     <title>BudgetMeRedux</title>
 </head>
 <body>
@@ -19,32 +22,18 @@
                 <h1 class="title_two">Redux</h1>
             </div>
 
-            <div class="budget">
-                <div class="budget__title">
-                    Available Budget in <span class="budget__title--month">%Month%</span>:
+            <div class="budget-header">
+                <div class="budget-header__income">
+                    <div class="title">Income</div>
+                    <div class="income-total"></div>
                 </div>
-                
-                <div class="budget__value">+ 2,345.64</div>
-                
-                <div class="budget__income clearfix">
-                    <div class="budget__income--text">Income</div>
-                    <div class="right">
-                        <div class="budget__income--value">+ 4,300.00</div>
-                        <div class="budget__income--percentage">&nbsp;</div>
-                    </div>
-                </div>
-                
-                <div class="budget__expenses clearfix">
-                    <div class="budget__expenses--text">Expenses</div>
-                    <div class="right clearfix">
-                        <div class="budget__expenses--value">- 1,954.36</div>
-                        <div class="budget__expenses--percentage">45%</div>
-                    </div>
+                <div class="budget-header__chart"></div>
+                <div class="budget-header__expense">
+                    <div class="title">Expense</div>
+                    <div class="expense-total"></div>
                 </div>
             </div>
-        </div>
-    
-        <div class="bottom">
+
             <div class="add">
                 <div class="add__container">
                     <select class="add__type">
@@ -56,72 +45,26 @@
                     <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
                 </div>
             </div>
-            
-            <div class="container clearfix">
-                <div class="income">
-                    <h2 class="icome__title">Income</h2>
-                    
-                    <div class="income__list">
-                       
-                        <!--
-                        <div class="item clearfix" id="income-0">
-                            <div class="item__description">Salary</div>
-                            <div class="right clearfix">
-                                <div class="item__value">+ 2,100.00</div>
-                                <div class="item__delete">
-                                    <button class="item__delete--btn">
-                                        <i class="ion-ios-close-outline"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="item clearfix" id="income-1">
-                            <div class="item__description">Sold car</div>
-                            <div class="right clearfix">
-                                <div class="item__value">+ 1,500.00</div>
-                                <div class="item__delete">
-                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        -->
-                        
-                    </div>
+        </div>
+    
+        <div class="bottom">
+            <div class="dashboard">
+                <h2 class="dashboard__title">Dashboard</h2>
+                <div class="dashboard__toggle">
+                    <div class="toggle-expenses">Expenses</div>
+                    <div class="toggle-income">Income</div>
+                    <div class="toggle-all">All</div>
                 </div>
-                
-                
-                
-                <div class="expenses">
-                    <h2 class="expenses__title">Expenses</h2>
-                    
-                    <div class="expenses__list">
-                       
-                        <!--
-                        <div class="item clearfix" id="expense-0">
-                            <div class="item__description">Apartment rent</div>
-                            <div class="right clearfix">
-                                <div class="item__value">- 900.00</div>
-                                <div class="item__percentage">21%</div>
-                                <div class="item__delete">
-                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item clearfix" id="expense-1">
-                            <div class="item__description">Grocery shopping</div>
-                            <div class="right clearfix">
-                                <div class="item__value">- 435.28</div>
-                                <div class="item__percentage">10%</div>
-                                <div class="item__delete">
-                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        -->
-                        
-                    </div>
+                <div class="hide" id="exepense"></div>
+                <div id="income">
+                    <ul class="income__list">
+                        <li id="0" class="income__entry"></li>
+                            <div class="entry">Salary: $8000</div>
+                            <div id="edit=btn"></div>
+                            <div id="delete-btn"></div>
+                    </ul>
                 </div>
+                <div class="hide" id="all"></div>
             </div>
         </div>
     </div>
