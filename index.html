@@ -17,19 +17,19 @@
 
     <div class="wrapper">
         <div class="top">
-            <div class="title">
+            <div class="main-title">
                 <h1 class="title_one">BudgetMe</h1>
                 <h1 class="title_two">Redux</h1>
             </div>
 
             <div class="budget-header">
                 <div class="budget-header__income">
-                    <div class="title">Income</div>
+                    <div class="title">Income:</div>
                     <div class="income-total"></div>
                 </div>
                 <div class="budget-header__chart"></div>
                 <div class="budget-header__expense">
-                    <div class="title">Expense</div>
+                    <div class="title">Expense:</div>
                     <div class="expense-total"></div>
                 </div>
             </div>
@@ -37,12 +37,12 @@
             <div class="add">
                 <div class="add__container">
                     <select class="add__type">
-                        <option value="inc" selected>+</option>
-                        <option value="exp">-</option>
+                        <option value="inc" class="pos" selected>+</option>
+                        <option value="exp" class="neg">-</option>
                     </select>
                     <input type="text" class="add__description" placeholder="Add description">
                     <input type="number" class="add__value" placeholder="Value">
-                    <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+                    <button class="add__btn"><i class="fas fa-plus-square"></i></button>
                 </div>
             </div>
         </div>
@@ -52,19 +52,23 @@
                 <h2 class="dashboard__title">Dashboard</h2>
                 <div class="dashboard__toggle">
                     <div class="toggle-expenses">Expenses</div>
-                    <div class="toggle-income">Income</div>
+                    <div class="toggle-income acitve">Income</div>
                     <div class="toggle-all">All</div>
                 </div>
-                <div class="hide" id="exepense"></div>
+                <div class="hide" id="expense">
+                    <ul class="list"></ul>
+                </div>
                 <div id="income">
-                    <ul class="income__list">
+                    <ul class="list">
                         <li id="0" class="income__entry"></li>
                             <div class="entry">Salary: $8000</div>
                             <div id="edit=btn"></div>
                             <div id="delete-btn"></div>
                     </ul>
                 </div>
-                <div class="hide" id="all"></div>
+                <div class="hide" id="all">
+                    <ul class="list"></ul>
+                </div>
             </div>
         </div>
     </div>
