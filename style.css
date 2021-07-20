@@ -8,8 +8,11 @@
     /* Colors */
     --clr-light: rgba(255, 255, 255);
     --clr-dark: rgba(0, 0, 0);
-    --clr-one: #34016A;
-    --clr-two: #ED6051;
+    --clr-one: rgb(4,170,109);
+    --clr-two: rgb(220,20,60);
+    --clr-three: rgb(40,42,53);
+    --clr-four: rgb(40,42,53);
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.5);
 
     /* Fonts/Texts */
     --ff-primary: 'Ubuntu', sans-serif;;
@@ -20,12 +23,129 @@
 
 /* General Styles */
 body {
-    height: 100vh;
+    font-family: var(--ff-primary);
+    color: var(--clr-light);
+    min-height: 100vh;
     overflow: hidden;
     margin: 0;
-    font-family: var(--ff-primary);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #708090;
+}
+
+h1 {font-size: 5em;}
+h2 {font-size: 3em;}
+
+ul {
+    list-style: none;
+}
+
+option {
+    color: var(--clr-dark);
 }
 
 /* Class Styles */
+.wrapper {
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-three);
+    padding: 4em;
+    border-radius: 25px;
+    box-shadow: var(--bs);
+}
+
+.main-title {
+    display: flex;
+    margin: 25px;
+}
+
+.title_two {
+    color: var(--clr-one);
+}
+
+.budget-header {
+    display: flex;
+    padding: 5px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.title {
+    font-size: 2em;
+}
+
+.budget-header__chart {
+    margin: 0 100px 0 100px;
+}
+
+.add__container select,
+.add__container input {
+    font-size: 1.50em;
+}
+
+
+
+.add__type,
+.add__description,
+.add__value,
+.add__btn {
+    background-color: inherit;
+    border: none;
+    border-radius: 5px;
+    color: var(--clr-light);
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+.add__type,
+.add__description,
+.add__value:focus {
+    outline: none;
+}
+
+.add__btn {
+    transition: all 0.3s ease;
+    font-size: 2em;
+    padding: 0px;
+}
+
+.add__btn:hover {
+    color: var(--clr-one);
+    background-color: inherit;
+}
+
+.dashboard__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-income {
+    margin: 25px 50px 25px 50px;
+}
+
+.toggle-income,
+.toggle-all,
+.toggle-expenses {
+    cursor: pointer;
+    transition: 0.4s all ease;
+    font-weight: var(--fw-bold);
+}
+
+.toggle-income:hover,
+.toggle-all:hover,
+.toggle-expenses:hover {
+    color: var(--clr-one);
+}
+
+.active {
+    opacity: 1 !important;
+}
+
+.hide {
+    display: none;
+}
+
 
 /* Mobile Settings */
