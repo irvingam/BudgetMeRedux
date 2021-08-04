@@ -129,14 +129,37 @@ option {
 .toggle-all,
 .toggle-expenses {
     cursor: pointer;
-    transition: 0.4s all ease;
     font-weight: var(--fw-bold);
+    position: relative;
 }
 
-.toggle-income:hover,
-.toggle-all:hover,
-.toggle-expenses:hover {
-    color: var(--clr-one);
+.toggle-income:before,
+.toggle-all:before,
+.toggle-expenses:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--clr-light);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle-income:before {
+    background-color: var(--clr-one);
+}
+
+.toggle-expenses:before {
+    background-color: var(--clr-two);
+}
+
+.toggle-income:hover:before,
+.toggle-all:hover:before,
+.toggle-expenses:hover:before {
+    visibility: visible;
+    width: 100%;
 }
 
 .active {
